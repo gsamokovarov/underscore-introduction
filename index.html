@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+
+    <title>Introduction to Underscore and jQuery</title>
+
+    <meta name=description content="Въведение в Underscore и jQuery.">
+    <meta name=author content="Генади Самоковаров">
+
+    <link rel=stylesheet href="vendor/reveal.js/css/reveal.css">
+    <link rel=stylesheet href="vendor/reveal.js/css/theme/simple.css">
+    <link rel=stylesheet href="vendor/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700|Alegreya+SC:400,700">
+
+    <style>
+      .reveal,
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 { font-family: Alegreya SC, Palatino, Georgia, serif; }
+
+      .reveal h1 { font-size: 2.2em; text-shadow: none; }
+      .reveal h2 { font-size: 1.9em; }
+      .reveal h3 { font-size: 1.8em; }
+      .reveal h4 { font-size: 1.5em; }
+      .reveal h5 { font-size: 1.2em; }
+
+      .reveal img.inline { background: transparent; border: 0; box-shadow: none; margin: 0; vertical-align: middle; }
+
+      .reveal .hidden { visibility: hidden; }
+    </style>
+  </head>
+  <body>
+    <div class=reveal>
+      <div class=slides>
+
+        <section>
+          <h1>Въведение в Underscore и jQuery</h1>
+          <p><small><a href=https://github.com/gsamokovarov>Генади Самоковаров</a></small></p>
+        </section>
+
+        <section>
+          <h1>Генади Самоковаров</h1>
+          <p align=center><img class=inline src=img/me.png></img></p>
+          <ul>
+            <li>Работи за <a href=http://www.vmware.com>VMware</a></li>
+            <li>... и за <a href=https://github.com/gsamokovarov>себе си</a> ☺</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="vendor/reveal.js/lib/js/head.min.js"></script>
+    <script src="vendor/reveal.js/js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: 'default',
+        dependencies: [
+          {
+            src: 'vendor/reveal.js/plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
