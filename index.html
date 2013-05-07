@@ -105,12 +105,76 @@
           <section>
             <h1>Лирично отклонение</h1>
             <br>
-            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="450" height="403">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="603" height="540" title="И това още е смешно ☺">
               <param name="movie" value="http://i47.vbox7.com/player/ext.swf?vid=22f0243e">
               <param name="quality" value="high">
               <embed src="http://i48.vbox7.com/player/ext.swf?vid=22f0243e" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="603" height="540">
             </object>
           </section>
+
+          <section>
+            <h1>typeof</h1>
+            <p class=fragment>Как да разберем дали нещо е <strong>Array</strong>?</p>
+            <div class=fragment>
+              <pre><code>&gt; typeof []
+'object'</code></pre>
+            </div>
+            <p class=fragment>A дали е <strong>RegExp</strong>?</p>
+            <div class=fragment>
+              <pre><code>&gt; typeof /./
+'object'</code></pre>
+            </div>
+            <p class=fragment>Дори <strong>null</strong>?</p>
+            <div class=fragment>
+              <pre><code>&gt; typeof null
+'object'</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>Може би instanceof?</h1>
+            <p class=fragment>Накратко &mdash; горе&ndash;долу</p>
+            <div class=fragment>
+              <pre><code>> [] instanceof Array
+true
+> /./ instanceof RegExp
+true
+> null instanceof Null
+ReferenceError: Null is not defined</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>Опа!</h1>
+            <p class=fragment><strong>null</strong> конструктора не е изваден...</p>
+            <p class=fragment>но не това е проблема...</p>
+          </section>
+
+          <section>
+            <h1>Надълго</h1>
+          </section>
+
+          <section data-transition=none>
+            <p align=center><img class=inline src=img/instanceof-1.png></img></p>
+          </section>
+
+          <section data-transition=none>
+            <p align=center><img class=inline src=img/instanceof-2.png></img></p>
+          </section>
+
+          <section data-transition=none>
+            <p align=center><img class=inline src=img/instanceof-3.png></img></p>
+          </section>
+
+          <section data-transition=none>
+            <p align=center><img class=inline src=img/instanceof-4.png></img></p>
+          </section>
+
+          <section>
+            <h1 title="Тук не става на въпрос за ракия, очевидно.">Домашно</h1>
+            <p>Доста добро четиво по въпроса, може да намерите <a href=http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray>тук</a>.</p>
+          </section>
+
         </section>
       </div>
     </div>
