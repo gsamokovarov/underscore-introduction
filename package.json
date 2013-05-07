@@ -1,0 +1,15 @@
+{
+  "name": "underscore-and-jquery-introduction",
+  "description": "Introduction to Underscore and jQuery",
+  "version": "0.0.1",
+  "author": "Genadi Samokovarov <gsamokovarov@gmail.com>",
+  "keywords": [
+    "underscore",
+    "jquery",
+    "presentation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gsamokovarov/underscore-and-jquery-introduction.git"
+  }
+}
