@@ -131,7 +131,7 @@
           </section>
 
           <section>
-            <h1>Може би instanceof?</h1>
+            <h1>instanceof</h1>
             <p class=fragment>Накратко &mdash; горе&ndash;долу</p>
             <div class=fragment>
               <pre><code>> [] instanceof Array
@@ -144,9 +144,9 @@ ReferenceError: Null is not defined</code></pre>
           </section>
 
           <section>
-            <h1>Опа!</h1>
-            <p class=fragment><strong>null</strong> конструктора не е изваден...</p>
-            <p class=fragment>но не това е проблема...</p>
+            <h1>Опа</h1>
+            <p class=fragment>Чупи се при <strong>null</strong>, защото конструктора не е изваден...</p>
+            <p class=fragment>но не това е по-голямото зло.</p>
           </section>
 
           <section>
@@ -172,6 +172,30 @@ ReferenceError: Null is not defined</code></pre>
           <section>
             <h1 title="Тук не става на въпрос за ракия, очевидно.">Домашно</h1>
             <p>Доста добро четиво по въпроса, може да намерите <a href=http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray>тук</a>.</p>
+          </section>
+
+          <section>
+            <h1>Препоръчвам</h1>
+            <pre><code>&gt; {}.toString.call([]) === '[object Array]'
+true
+&gt; {}.toString.call(/./) === '[object RegExp]'
+true
+&gt; {}.toString.call(null) === '[object Null]'
+true
+</code></pre>
+          </section>
+          <section>
+            <h1>За null</h2>
+            <p class=fragment>За сравнение на стойност с <strong>null</strong></p>
+            <div class=fragment>
+              <pre><code>value == null
+true</code></pre>
+            </div>
+            <ul>
+              <li class=fragment>По-бързо</li>
+              <li class=fragment>Хваща <strong>undefined</strong></li>
+            </ul>
+            <p class=fragment><strong>Единствената</strong> смислена употреба на <code>==</code></p>
           </section>
 
         </section>
