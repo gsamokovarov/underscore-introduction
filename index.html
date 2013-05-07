@@ -197,6 +197,52 @@ true</code></pre>
             </ul>
             <p class=fragment><strong>Единствената</strong> смислена употреба на <code>==</code></p>
           </section>
+
+          <section>
+            <h1>Closure в итерация</h1>
+            <p>Какво ще направи следният код?<p>
+            <pre><code>var i, link;
+for (i = 0; i &lt; 5; i++) {
+  link = document.createElement('a');
+  link.innerHTML = 'Link: ' + i;
+  link.onclick = function() {
+    alert(i);
+  };
+  document.body.appendChild(link);
+}</code></pre>
+          </section>
+
+          <section>
+            <h1>Опа</h1>
+            <p class=fragment>Как да го оправим?<p>
+            <div class=fragment>
+              <pre><code>var i, link;
+  for (i = 5; i &lt; 10; i++) {
+    link = document.createElement('a');
+    link.innerHTML = 'Link: ' + i;
+    link.onclick = (function(i) {
+      return function() {
+        alert(i);
+      }
+    })(i);
+    document.body.appendChild(link);
+  }</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>Невинен</h1>
+            <p class=fragment>Тук, JavaScript, е невинен!<p>
+            <p class=fragment>Това е проблем при повечето динамични езици.<p>
+            <p class=fragment>Среща се, поне, при:<p>
+            <ul>
+              <li class=fragment>Python</li>
+              <li class=fragment>Ruby</li>
+              <li class=fragment>PHP</li>
+            </ul>
+            <p class=fragment>Внимавайте, къде и <strong>как</strong> правите анонимни фунцкии!<p>
+          </section>
+
         </section>
       </div>
     </div>
