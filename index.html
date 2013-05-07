@@ -217,15 +217,15 @@ for (i = 0; i &lt; 5; i++) {
             <p class=fragment>Как да го оправим?<p>
             <div class=fragment>
               <pre><code>var i, link;
-  for (i = 5; i &lt; 10; i++) {
-    link = document.createElement('a');
-    link.innerHTML = 'Link: ' + i;
-    link.onclick = (function(i) {
-      return function() {
-        alert(i);
-      }
-    })(i);
-    document.body.appendChild(link);
+for (i = 5; i &lt; 10; i++) {
+  link = document.createElement('a');
+  link.innerHTML = 'Link: ' + i;
+  link.onclick = (function(i) {
+    return function() {
+      alert(i);
+    }
+  })(i);
+  document.body.appendChild(link);
   }</code></pre>
             </div>
           </section>
