@@ -410,15 +410,44 @@ console.log(_.isNaN(NaN));              // true</code></pre>
 
           <section>
             <h1>Показно</h1>
-            <p class=fragment><strong>_.isEmpty</strong> проверява дали обект е празен.
+            <p class=fragment><strong>_.isEmpty</strong> проверява дали обект е празен.</p>
             <div class=fragment>
               <pre><code>console.log(_.isEmpty({}));             // true
 console.log(_.isEmpty({option: true})); // false</code></pre>
             </div>
-            <p class=fragment><strong>_.isEqual</strong> сравнява обекти в дълбочина.
+            <p class=fragment><strong>_.isEqual</strong> сравнява обекти в дълбочина.</p>
             <div class=fragment>
               <pre><code>console.log(_({a: {b: 1}}).isEqual({a: {b: 1}}));   // true
 console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>_.extend</h1>
+            <p class=fragment>Събира ключовете на два или повече обекта в един.</p>
+            <p class=fragment>Последният ключ печели.</p>
+            <div class=fragment>
+              <pre><code>_.extend({name : 'moe'}, {age : 50})</code></pre>
+            </div>
+            <div class=fragment>
+              <br>
+              <p><strong>Хипер удобно!</strong></p>
+            </div>
+          </section>
+
+          <section>
+            <h1>_.pick</h1>
+            <p class=fragment>Избира атрибути от обект.</p>
+            <p class=fragment>Връша нов обект <strong>само</strong> с тях.</p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <p class=fragment>Искам само <code>name</code> и <code>age</code> от
+            <br>
+            <pre<code>{name : 'moe', age: 50, userid : 'moe1'}</code></pre>
+            <div class=fragment>
+              <pre><code>_.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');</code></pre>
             </div>
           </section>
 
