@@ -371,6 +371,7 @@ console.log([].slice.call(fragments) instanceof Array); // true</code></pre>
             <h1>Предикати</h1>
             <p class=fragment>Сещате се за проблемите с <stong>typeof</strong> и <strong>instanceof</strong>?</p>
             <ul class=fragment>
+              <li>_.isElement</li>
               <li>_.isArray</li>
               <li>_.isObject</li>
               <li>_.isArguments</li>
@@ -396,28 +397,29 @@ console.log(_.isBoolean(new Boolean));  // true
 console.log(_.isDate(new Date));        // true
 console.log(_.isNull(void 0));          // false
 console.log(_.isUndefined(void 0));     // true
-console.log(_.isNaN(NaN));              // true
-            </code></pre>
+console.log(_.isNaN(NaN));              // true</code></pre>
           </section>
 
           <section>
-            <h1>Предикати</h1>
-            <p class=fragment>Сещате се за проблемите с <stong>typeof</strong> и <strong>instanceof</strong>?</p>
-            <ul class=fragment>
-              <li>_.isArray</li>
-              <li>_.isObject</li>
-              <li>_.isArguments</li>
-              <li>_.isFunction</li>
-              <li>_.isString</li>
-              <li>_.isNumber</li>
-              <li>_.isFinite</li>
-              <li>_.isBoolean</li>
-              <li>_.isDate</li>
-              <li>_.isRegExp</li>
-              <li>_.isNaN</li>
-              <li>_.isNull</li>
-              <li>_.isUndefined</li>
+            <h1>Други</h1>
+            <ul>
+              <li>_.isЕqual</li>
+              <li>_.isEmpty</li>
             </ul>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <p class=fragment><strong>_.isEmpty</strong> проверява дали обект е празен.
+            <div class=fragment>
+              <pre><code>console.log(_.isEmpty({}));             // true
+console.log(_.isEmpty({option: true})); // false</code></pre>
+            </div>
+            <p class=fragment><strong>_.isEqual</strong> сравнява обекти в дълбочина.
+            <div class=fragment>
+              <pre><code>console.log(_({a: {b: 1}}).isEqual({a: {b: 1}}));   // true
+console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
+            </div>
           </section>
 
           <section>
