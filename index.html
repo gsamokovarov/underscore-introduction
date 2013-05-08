@@ -620,6 +620,29 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
             <p>Има още интересни фунцкии, които няма да можем да покажем сега. Разгледайте <a href=http://underscorejs.org/#arrays>документацията.</a></p>
           </section>
 
+          <section>
+            <h1>Chaining</h1>
+            <p>Позволява ни да извъкваме редица от <strong>Underscore</strong> методи, върху една и съща колекция.</p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <pre><code>var lyrics = [
+  {line : 1, words : "I'm a lumberjack and I'm okay"},
+  {line : 2, words : "I sleep all night and I work all day"},
+  {line : 3, words : "He's a lumberjack and he's okay"},
+  {line : 4, words : "He sleeps all night and he works all day"}
+];
+
+_.chain(lyrics)
+  .map(function(line) { return line.words.split(' '); })
+  .flatten()
+  .reduce(function(counts, word) {
+    counts[word] = (counts[word] || 0) + 1;
+    return counts;
+  }, {})
+  .value();</code></pre>
+          </section>
 
           <section>
             <h1>Oще</h1>
