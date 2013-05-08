@@ -200,7 +200,7 @@ true
           </section>
 
           <section>
-            <h1>За null</h2>
+            <h1>null</h1>
             <p class=fragment>За сравнение на стойност с <strong>null</strong></p>
             <div class=fragment>
               <pre><code>value == null
@@ -211,6 +211,19 @@ true</code></pre>
               <li class=fragment>Хваща <strong>undefined</strong></li>
             </ul>
             <p class=fragment><strong>Единствената</strong> смислена употреба на <code>==</code></p>
+          </section>
+
+          <section>
+            <h1>void</h1>
+            <p class=fragment>Унарен оператор, който връща <strong>undefined</strong> за всичко, което му дадем отдясно.</p>
+            <div class=fragment>
+              <pre><code>void 0 === undefined
+true</code></pre>
+            </div>
+            <ul>
+              <li class=fragment>По-бързо от <strong>тypeof</strong></li>
+              <li class=fragment>Портабилно</li>
+            </ul>
           </section>
 
           <section>
