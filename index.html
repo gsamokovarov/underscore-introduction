@@ -463,9 +463,9 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.each</h1>
-            <p class=fragment>По-добрият начин за итерация.</p>
-            <p class=fragment>Приема нещо в/у което да итерира, функция и контекст.</p>
-            <p class=fragment>Контекстът може да бъде пропуснат, но е добра идея, ако ви трябва.</p>
+            <p class=fragment>По-добрият начин за итерация</p>
+            <p class=fragment>Приема нещо в/у което да итерира, функция и контекст</p>
+            <p class=fragment>Контекстът може да бъде пропуснат, но е добра идея, ако ви трябва</p>
             <p class=fragment>При масиви и подобни, фунцкията се вика с:
               <br>
               <code>(element, index, list)</code>
@@ -494,9 +494,9 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.map</h1>
-            <p class=fragment>Взима колекция и съпоставя функция за всеки елемент.</p>
-            <p class=fragment>Акумулира върнатите стойностти и ги връща в масив.</p>
-            <p class=fragment>Интерфейса е като на <strong>_.each</strong>.</p>
+            <p class=fragment>Взима колекция и съпоставя функция за всеки елемент</p>
+            <p class=fragment>Акумулира върнатите стойностти и ги връща в масив</p>
+            <p class=fragment>Интерфейса е като на <strong>_.each</strong></p>
           </section>
 
           <section>
@@ -515,9 +515,9 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.filter</h1>
-            <p class=fragment>Взима колекция и съпоставя функция за всеки елемент.</p>
-            <p class=fragment>Събира елементите, за които функцията е била истина, в масив.</p>
-            <p class=fragment>Интерфейса е като на <strong>_.each</strong>.</p>
+            <p class=fragment>Взима колекция и съпоставя функция за всеки елемент</p>
+            <p class=fragment>Събира елементите, за които функцията е била истина, в масив</p>
+            <p class=fragment>Интерфейса е като на <strong>_.each</strong></p>
           </section>
 
           <section>
@@ -537,7 +537,7 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           <section>
             <h1>_.reduce</h1>
             <p>Без крави тука ☹</p>
-            <p class=fragment>Събира голяма колекция в един резултат.</p>
+            <p class=fragment>Събира голяма колекция в един резултат</p>
             <p class=fragment align=center><img class=inline src=img/foldl.png></p>
             <p class=fragment><code>_.reduce(list, iterator, memo, [context])</code></p>
             <p class=fragment>iterator(memo, value, key/index, list)</code></p>
@@ -551,8 +551,45 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           </section>
 
           <section>
+            <h1>_.toArray</h1>
+            <p class=fragment>Спомняте си <code>[].slice</code>?</p>
+            <p class=fragment>Това е по-добро и по-четимо</p>
+            <p class=fragment>Ако не сте се досетили, хваща какво-да-е и го прави на масив.</p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <div class=fragment>
+              <pre><code>(function(){ return _.toArray(arguments).slice(1); })(1, 2, 3, 4);</code></pre>
+            </div>
+          </section>
+
+          <section>
             <h1>Още</h1>
-            <p>Има още интересни фунцкии, които няма да можем да покажем сега. Разгледайте <a href=http://underscorejs.org/#collections>документацията.</p>
+            <p>Има още интересни фунцкии, които няма да можем да покажем сега. Разгледайте <a href=http://underscorejs.org/#collections>документацията.</a></p>
+          </section>
+
+          <section>
+            <h1>Масиви</h1>
+            <p>Полезни фунцкии за <strong>масиви</strong> и подобни</p>
+          </section>
+
+          <section>
+            <h1>_.flatten</h1>
+            <p><code>_.flatten(array, [shallow])</code></p>
+            <p class=fragment>Изглажда дълбоки масиви (колкото си искате дълбоки)</p>
+            <p class=fragment>Ако <code>shallow</code> е истина, изглажда само едно ниво</p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <div class=fragment>
+              <pre><code>_.flatten([1, [2], [3, [[4]]]]);</code></pre>
+            </div>
+
+            <div class=fragment>
+              <pre><code>_.flatten([1, [2], [3, [[4]]]], true);</code></pre>
+            </div>
           </section>
 
           <section>
