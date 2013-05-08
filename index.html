@@ -371,7 +371,6 @@ console.log([].slice.call(fragments) instanceof Array); // true</code></pre>
             <h1>Предикати</h1>
             <p class=fragment>Сещате се за проблемите с <stong>typeof</strong> и <strong>instanceof</strong>?</p>
             <ul class=fragment>
-              <li>_.isElement</li>
               <li>_.isArray</li>
               <li>_.isObject</li>
               <li>_.isArguments</li>
@@ -424,6 +423,7 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.extend</h1>
+            <p><code>_.extend(destination, *sources) </code><p>
             <p class=fragment>Събира ключовете на два или повече обекта в един.</p>
             <p class=fragment>Последният ключ печели.</p>
             <div class=fragment>
@@ -437,6 +437,7 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.pick</h1>
+            <p><code>_.pick(object, *keys) </code><p>
             <p class=fragment>Избира ключове от обект.</p>
             <p class=fragment>Връша нов обект <strong>само</strong> с тях.</p>
           </section>
@@ -463,8 +464,8 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.each</h1>
+            <p><code>_.each(list, iterator, [context])</code></p>
             <p class=fragment>По-добрият начин за итерация</p>
-            <p class=fragment>Приема нещо в/у което да итерира, функция и контекст</p>
             <p class=fragment>Контекстът може да бъде пропуснат, но е добра идея, ако ви трябва</p>
             <p class=fragment>При масиви и подобни, фунцкията се вика с:
               <br>
@@ -494,9 +495,9 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.map</h1>
+            <p><code>_.map(list, iterator, [context])</code></p>
             <p class=fragment>Взима колекция и съпоставя функция за всеки елемент</p>
             <p class=fragment>Акумулира върнатите стойностти и ги връща в масив</p>
-            <p class=fragment>Интерфейса е като на <strong>_.each</strong></p>
           </section>
 
           <section>
@@ -515,9 +516,9 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.filter</h1>
+            <p><code>_.filter(list, iterator, [context])</code></p>
             <p class=fragment>Взима колекция и съпоставя функция за всеки елемент</p>
             <p class=fragment>Събира елементите, за които функцията е била истина, в масив</p>
-            <p class=fragment>Интерфейса е като на <strong>_.each</strong></p>
           </section>
 
           <section>
@@ -536,11 +537,11 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.reduce</h1>
+            <p><code>_.reduce(list, iterator, memo, [context])</code></p>
+            <p>iterator(memo, value, key/index, list)</code></p>
             <p>Без крави тука ☹</p>
             <p class=fragment>Събира голяма колекция в един резултат</p>
             <p class=fragment align=center><img class=inline src=img/foldl.png></p>
-            <p class=fragment><code>_.reduce(list, iterator, memo, [context])</code></p>
-            <p class=fragment>iterator(memo, value, key/index, list)</code></p>
           </section>
 
           <section>
@@ -552,6 +553,7 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
 
           <section>
             <h1>_.toArray</h1>
+            <p><code>_.toArray(obj)</code></p>
             <p class=fragment>Спомняте си <code>[].slice</code>?</p>
             <p class=fragment>Това е по-добро и по-четимо</p>
             <p class=fragment>Ако не сте се досетили, хваща какво-да-е и го прави на масив.</p>
@@ -594,7 +596,8 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           <section>
             <h1>_.compact</h1>
             <p><code>_.compact(array)</code></p>
-            <p class=fragment>Връща нов масив, без <strong>falsy</strong> стойностти</p>
+            <p class=fragment>Връща нов масив, без <strong>лъживи</strong> стойностти</p>
+            <p class=fragment><strong>Лъжливи стойностти</strong>:</p>
             <ul>
               <li class=fragment>0</li>
               <li class=fragment>false</li>
@@ -611,6 +614,12 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
               <pre><code>_.compact([0, 1, false, 2, '', 3]);</code></pre>
             </div>
           </section>
+
+          <section>
+            <h1>Масиви</h1>
+            <p>Има още интересни фунцкии, които няма да можем да покажем сега. Разгледайте <a href=http://underscorejs.org/#arrays>документацията.</a></p>
+          </section>
+
 
           <section>
             <h1>Oще</h1>
