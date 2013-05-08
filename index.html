@@ -257,6 +257,70 @@ for (i = 5; i &lt; 10; i++) {
             <p class=fragment>Внимавайте, къде и <strong>как</strong> правите анонимни фунцкии!<p>
           </section>
 
+          <section>
+            <h1>arguments</h1>
+            <p class=fragment>Искам да именувам <em>първият</em> от аргументите си като останалите да са вариадични.</p>
+            <div class=fragment>
+              <pre><code>var sum = function(first) {
+  var rest = arguments.slice(1);
+  var result = first;
+  for (var i = 0, len = rest.length; i &lt; len; i++) {
+    result += rest[i];
+  }
+  return result;
+};
+
+sum(1, 2, 3);</code></pre>
+            </div>
+
+            <div class=fragment>
+              <pre><code>TypeError: Object #&lt;Object&gt; has no method 'slice'</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>arguments</h1>
+            <p>Това е интересно, нека видим какво става.</p>
+            <div class=fragment>
+              <pre><code>(function() {
+  console.log(typeof arguments);           // object
+  console.log(arguments instanceof Array); // false
+})();</code></pre>
+            </div>
+            <p class=fragment><strong>arguments</strong> не е <strong>Array</strong>, въпреки че изглежда като такъв.</p>
+          </section>
+
+          <section>
+            <h1>arguments</h1>
+            <p>Как да го излъжем?</p>
+            <div class=fragment>
+              <pre><code>var sum = function(first) {
+  var rest = [].slice.call(arguments, 1);
+  var result = first;
+  for (var i = 0, len = rest.length; i &lt; len; i++) {
+    result += rest[i];
+  }
+  return result;
+};
+
+sum(1, 2, 3);</code></pre>
+            </div>
+
+            <div class=fragment>
+              <pre><code>6</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <p align=center><img src=img/arguments-success.jpg></img></p>
+            <p class=fragment>Всъщност, това работи и за други <strong>Array</strong> подобни обекти.</p>
+            <div class=fragment>
+              <pre><code>var fragments = document.querySelectorAll('.fragment');
+console.log(fragments instanceof Array);                // false
+console.log([].slice.call(fragments) instanceof Array); // true</code></pre>
+            </div>
+          </section>
+
         </section>
       </div>
     </div>
