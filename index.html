@@ -565,7 +565,7 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           </section>
 
           <section>
-            <h1>Още</h1>
+            <h1>Колекции</h1>
             <p>Има още интересни фунцкии, които няма да можем да покажем сега. Разгледайте <a href=http://underscorejs.org/#collections>документацията.</a></p>
           </section>
 
@@ -586,9 +586,29 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
             <div class=fragment>
               <pre><code>_.flatten([1, [2], [3, [[4]]]]);</code></pre>
             </div>
-
             <div class=fragment>
               <pre><code>_.flatten([1, [2], [3, [[4]]]], true);</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>_.compact</h1>
+            <p><code>_.compact(array)</code></p>
+            <p class=fragment>Връща нов масив, без <strong>falsy</strong> стойностти</p>
+            <ul>
+              <li class=fragment>0</li>
+              <li class=fragment>false</li>
+              <li class=fragment>null</li>
+              <li class=fragment>undefined</li>
+              <li class=fragment>""</li>
+              <li class=fragment>NaN</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <div class=fragment>
+              <pre><code>_.compact([0, 1, false, 2, '', 3]);</code></pre>
             </div>
           </section>
 
