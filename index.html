@@ -495,7 +495,7 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           <section>
             <h1>_.map</h1>
             <p class=fragment>Взима колекция и съпоставя функция за всеки елемент.</p>
-            <p class=fragment>Акумулира върнатите стойностти и ги връща като масив.</p>
+            <p class=fragment>Акумулира върнатите стойностти и ги връща в масив.</p>
             <p class=fragment>Интерфейса е като на <strong>_.each</strong>.</p>
           </section>
 
@@ -509,6 +509,27 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
             <div class=fragment>
               <pre><code>_.map(_.range(4), function(i) {
   return i * i;
+});</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>_.filter</h1>
+            <p class=fragment>Взима колекция и съпоставя функция за всеки елемент.</p>
+            <p class=fragment>Събира елементите, за които функцията е била истина, в масив.</p>
+            <p class=fragment>Интерфейса е като на <strong>_.each</strong>.</p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <p class=fragment align=center><img class=inline src=img/filter.png></p>
+          </section>
+
+          <section>
+            <h1>Сериозно</h1>
+            <div class=fragment>
+              <pre><code>_.filter(_.range(10), function(i) {
+  return i % 2 === 0;
 });</code></pre>
             </div>
           </section>
