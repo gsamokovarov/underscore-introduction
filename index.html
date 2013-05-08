@@ -138,14 +138,14 @@
 true
 > /./ instanceof RegExp
 true
-> null instanceof Null
-ReferenceError: Null is not defined</code></pre>
+> null instanceof Object
+false</code></pre>
             </div>
           </section>
 
           <section>
             <h1>Опа</h1>
-            <p class=fragment>Чупи се при <strong>null</strong>, защото конструктора не е изваден...</p>
+            <p class=fragment>Чупи се при <strong>null</strong>,</p>
             <p class=fragment>но не това е по-голямото зло.</p>
           </section>
 
@@ -170,6 +170,18 @@ ReferenceError: Null is not defined</code></pre>
           </section>
 
           <section>
+            <h1>Нагледно</h1>
+            <pre><code>document.body.appendChild(document.createElement('iframe'));
+OtherArray = window.frames[window.frames.length - 1].Array;
+var array = new OtherArray(1, 2, 3);
+
+array instanceof Array;      // false
+array.constructor === Array; // false
+
+Array === OtherArray;        // false</code></pre>
+          </section>
+
+          <section>
             <h1 title="Тук не става на въпрос за ракия, очевидно.">Домашно</h1>
             <p>Доста добро четиво по въпроса, може да намерите <a href=http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray>тук</a>.</p>
           </section>
@@ -184,6 +196,7 @@ true
 true
 </code></pre>
           </section>
+
           <section>
             <h1>За null</h2>
             <p class=fragment>За сравнение на стойност с <strong>null</strong></p>
