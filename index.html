@@ -457,6 +457,63 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           </section>
 
           <section>
+            <h1>Колекции</h1>
+            <p class=fragment>Под колекции ще разбираме <strong>обекти</strong>, <strong>масиви</strong> и подобни</p>
+          </section>
+
+          <section>
+            <h1>_.each</h1>
+            <p class=fragment>По-добрият начин за итерация.</p>
+            <p class=fragment>Приема нещо в/у което да итерира, функция и контекст.</p>
+            <p class=fragment>Контекстът може да бъде пропуснат, но е добра идея, ако ви трябва.</p>
+            <p class=fragment>При масиви и подобни, фунцкията се вика с:
+              <br>
+              <code>(element, index, list)</code>
+            </p>
+            <p class=fragment>При обекти, фунцкията се вика с:
+              <br>
+              <code>(value, list)</code>
+            </p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <p class=fragment>Спомняте си проблемите с анонимните фунцкии?<p>
+            <div class=fragment>
+              <pre><code>_.each(_.range(5), function(i) {
+  var link = document.createElement('a');
+  link.innerHTML = 'Link: ' + i;
+  link.onclick = function() {
+    alert(i);
+  };
+  document.body.appendChild(link);
+});</code></pre>
+            </div>
+            <p class=fragment>Предпочитайте го пред <strong>for</strong>!</p>
+          </section>
+
+          <section>
+            <h1>_.map</h1>
+            <p class=fragment>Взима колекция и съпоставя функция за всеки елемент.</p>
+            <p class=fragment>Акумулира върнатите стойностти и ги връща като масив.</p>
+            <p class=fragment>Интерфейса е като на <strong>_.each</strong>.</p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <p class=fragment align=center><img class=inline src=img/map.png></p>
+          </section>
+
+          <section>
+            <h1>Сериозно</h1>
+            <div class=fragment>
+              <pre><code>_.map(_.range(4), function(i) {
+  return i * i;
+});</code></pre>
+            </div>
+          </section>
+
+          <section>
             <h1>Oще</h1>
             <p>За още информация последвайте следните връзки.</p>
             <ul>
