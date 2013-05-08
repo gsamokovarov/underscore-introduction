@@ -535,6 +535,22 @@ console.log(_({a: {b: 1}}).isEqual({a: {b: "1"}})); // false</code></pre>
           </section>
 
           <section>
+            <h1>_.reduce</h1>
+            <p>Без крави тука ☹</p>
+            <p class=fragment>Събира голяма колекция в един резултат.</p>
+            <p class=fragment align=center><img class=inline src=img/foldl.png></p>
+            <p class=fragment><code>_.reduce(list, iterator, memo, [context])</code></p>
+            <p class=fragment>iterator(memo, value, key/index, list)</code></p>
+          </section>
+
+          <section>
+            <h1>Показно</h1>
+            <div class=fragment>
+              <pre><code>_.reduce([1, 2, 3], function(memo, num) { return memo + num; }, 0);</code></pre>
+            </div>
+          </section>
+
+          <section>
             <h1>Oще</h1>
             <p>За още информация последвайте следните връзки.</p>
             <ul>
